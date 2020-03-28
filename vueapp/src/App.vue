@@ -26,6 +26,8 @@ body {
   #app {
     text-align: center;
     background-color: $eerie-black;
+    background-image: url('./assets/space.jpg');
+    background-blend-mode: color-dodge;
     color: $azureish-white;
     display: flex;
     align-items: center;
