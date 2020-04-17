@@ -29,9 +29,9 @@ button {
     @include button-active;
     border: none;
     box-shadow:
-    0 0 60px 30px $azureish-white,
-    0 0 100px 60px #00bfff,
-    0 0 140px 90px $saffron;
+    0 0 30px 15px $azureish-white,
+    0 0 50px 30px #00bfff,
+    0 0 60px 45px $saffron;
   }
 
   a{

@@ -3,9 +3,11 @@
     <div id="button">
       <CentralButton />
     </div>
-    <img src="../assets/spaceship.png" v-on:mousedown="fly" v-on:mouseup="stop" />
+    <img id="spaceship" src="../assets/spaceship.png" v-on:mousedown="fly" v-on:mouseup="stop" />
     <div id="laser" ref="laser"></div>
     <div id="laser2" ref="laser2"></div>
+    
+    <img id="moon" src="../assets/moon.png" />
   </div>
 </template>
 
@@ -62,7 +64,7 @@ export default {
   position: absolute;
 }
 
-img {
+#spaceship {
   z-index: 50;
   height: 400px;
   position: relative;
@@ -163,5 +165,20 @@ img {
     left: -1500px;
     bottom: -550px;
   }
+}
+
+#moon{
+    z-index: 20;
+    position: absolute;
+    top: 70px;
+    left: -80px;
+    height: 450px;
+    transition-property: all;
+
+    &:hover{
+        filter: invert(100);
+        transition-duration: 0.5s;
+        cursor: pointer;
+    }
 }
 </style>
