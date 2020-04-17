@@ -23,15 +23,15 @@ button {
   margin: 40px; 
   border: 3px dotted $azureish-white;
   font-family: "Monoton", cursive;
-  box-shadow:
-    0 0 60px 30px $azureish-white,
-    0 0 100px 60px $saffron,
-    0 0 140px 90px $smashed-pumpkin;
 
   &:hover {
     background: $pumpkin-gradient;
     @include button-active;
     border: none;
+    box-shadow:
+    0 0 60px 30px $azureish-white,
+    0 0 100px 60px #00bfff,
+    0 0 140px 90px $saffron;
   }
 
   a{
