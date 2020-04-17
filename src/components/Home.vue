@@ -120,13 +120,13 @@ img {
   }
 
   50% {
-    left: -30px;
-    bottom: -320px;
+    left: -40px;
+    bottom: -420px;
   }
 
   100% {
-    left: -200px;
-    bottom: -400px;
+    left: -400px;
+    bottom: -800px;
   }
 }
 
@@ -160,8 +160,8 @@ img {
   }
 
   100% {
-    left: -600px;
-    bottom: -600px;
+    left: -1500px;
+    bottom: -550px;
   }
 }
 </style>
