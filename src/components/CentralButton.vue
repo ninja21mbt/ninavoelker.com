@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button>Button</button>
+    <button><router-link to="/wtf">spacy</router-link></button>
   </div>
 </template>
 
@@ -19,12 +19,8 @@ export default {
 
 button {
   @include button;
-  @include button-shadow;
-  color: $azureish-white;
-  font-size: 1em;
-  margin: 40px;
-  font-size: 3em;
-  text-shadow: 2px 2px 5px $azureish-white;
+  @include button-shadow; 
+  margin: 40px; 
   border: 3px dotted $azureish-white;
   font-family: "Monoton", cursive;
 
@@ -32,7 +28,17 @@ button {
     background: $pumpkin-gradient;
     @include button-active;
     border: none;
-    text-shadow: 2px 2px 5px $eerie-black;
+  }
+
+  a{
+    color: $azureish-white;
+    font-size: 5em;
+    text-shadow: 2px 2px 5px $azureish-white;
+    text-decoration: none;
+
+    &:hover{
+      text-shadow: 2px 2px 5px $eerie-black;
+    }
   }
 }
 </style>

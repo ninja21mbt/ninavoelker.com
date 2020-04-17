@@ -1,16 +1,14 @@
 <template>
   <div id="app">
-    <CentralButton />
+<router-view></router-view>
   </div>
 </template>
 
 <script>
-import CentralButton from "./components/CentralButton.vue";
 
 export default {
   name: "App",
   components: {
-    CentralButton
   }
 };
 </script>
@@ -22,17 +20,27 @@ export default {
 body {
   margin: 0;
   height: 100vh;
-
+  overflow: hidden;
+}
   #app {
     text-align: center;
+      display: flex;
+    align-items: center;
+    justify-content: center;
+
     background-color: $eerie-black;
     background-image: url('./assets/space.jpg');
     background-blend-mode: color-dodge;
     color: $azureish-white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100%;
   }
+  
+
+img{
+  z-index: 100;
+  height: 400px;
+  position: absolute;
+  right: -90px;
+  bottom: -90px;
 }
 </style>
