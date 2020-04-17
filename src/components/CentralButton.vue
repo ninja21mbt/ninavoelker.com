@@ -23,6 +23,10 @@ button {
   margin: 40px; 
   border: 3px dotted $azureish-white;
   font-family: "Monoton", cursive;
+  box-shadow:
+    0 0 60px 30px #fff,
+    0 0 100px 60px #f0f,
+    0 0 140px 90px #0ff;
 
   &:hover {
     background: $pumpkin-gradient;

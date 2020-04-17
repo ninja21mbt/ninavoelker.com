@@ -29,10 +29,10 @@ export default {
         color: white;
         text-decoration: none;
         margin: 1em;
-        text-shadow: 0.06rem 0 0.06rem #00bfff, -0.125rem 0 0.06rem #f97509;
+        text-shadow: 0.1rem 0 0.1rem #00bfff, -0.125rem 0 0.1rem #f97509;
         font-family: 'Love Ya Like A Sister', cursive;
         font-size: 6em;
-        animation-duration: 0.01s;
+        animation-duration: 0.1s;
         animation-name: textflicker;
         animation-iteration-count: infinite;
         animation-direction: alternate;
@@ -40,10 +40,10 @@ export default {
 
     @keyframes textflicker {
   from {
-    text-shadow: 1px 0 0 #00bfff, -2px 0 0 #f97509;
+    text-shadow: 2px 0 0 #00bfff, -3px 0 0 #f97509;
   }
   to {
-    text-shadow: 2px 0.5px 2px #00bfff, -1px -0.5px 2px #f97509;
+    text-shadow: 2.5px 0.5px 2px #00bfff, -1px -0.5px 2.5px #f97509;
   }
 }
 }

@@ -38,11 +38,12 @@ export default {
   }
 
 
-img{
+img {
   z-index: 100;
   height: 400px;
   position: absolute;
   right: -90px;
   bottom: -90px;
+  
 }
 </style>
