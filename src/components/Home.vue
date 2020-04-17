@@ -3,7 +3,9 @@
     <div id="button">
       <CentralButton />
     </div>
-    <img src="../assets/spaceship.png" />
+    <img src="../assets/spaceship.png" v-on:mousedown="fly" v-on:mouseup="stop" />
+    <div id="laser" ref="laser"></div>
+    <div id="laser2" ref="laser2"></div>
   </div>
 </template>
 
@@ -12,11 +14,30 @@ import CentralButton from "../components/CentralButton.vue";
 
 export default {
   name: "Home",
-  props: {},
-  components: {
-    CentralButton
+   components: {
+      CentralButton
+    },
+  methods: {
+    fly: function(event) {
+      if (event) {
+        let el = this.$refs['laser'];
+        let el2 = this.$refs['laser2'];
+        el.style.setProperty("visibility", "visible");
+        el2.style.setProperty("visibility", "visible");
+      }},
+
+    stop: function(event) {
+      if (event) {
+        let el3 = this.$refs['laser'];
+        let el4 = this.$refs['laser2'];
+        el3.style.setProperty("visibility", "hidden");
+        el4.style.setProperty("visibility", "hidden");
+      }
+    }
+  },
+   
   }
-};
+;
 </script>
 
 <style lang="scss" scoped>
@@ -42,7 +63,7 @@ export default {
 }
 
 img {
-  z-index: 100;
+  z-index: 50;
   height: 400px;
   position: relative;
   right: -390px;
@@ -75,6 +96,72 @@ img {
   100% {
     right: -383px;
     bottom: -183px;
+  }
+}
+
+#laser {
+  z-index: 100;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  position: relative;
+  bottom: -300px;
+  background-color: red;
+  box-shadow: 0 0 16px 13px darkred, 0 0 25px 16px white, 0 0 15px 19px red;
+  visibility: hidden;
+  animation-name: laser;
+  animation-duration: 0.01s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes laser {
+  0% {
+    bottom: -300px;
+  }
+
+  50% {
+    left: -30px;
+    bottom: -320px;
+  }
+
+  100% {
+    left: -200px;
+    bottom: -400px;
+  }
+}
+
+#laser2 {
+  z-index: 100;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  position: relative;
+  bottom: -280px;
+  left: -100px;
+  visibility: hidden;
+
+  background-color: red;
+  box-shadow: 0 0 16px 13px darkred, 0 0 25px 16px white, 0 0 15px 19px red;
+
+  animation-name: laser2;
+  animation-duration: 0.001s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes laser2 {
+  0% {
+    left: -100px;
+    bottom: -280px;
+  }
+
+  50% {
+    left: -600px;
+    bottom: -350px;
+  }
+
+  100% {
+    left: -600px;
+    bottom: -600px;
   }
 }
 </style>
