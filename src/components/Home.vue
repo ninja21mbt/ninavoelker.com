@@ -72,7 +72,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-
   background-color: $eerie-black;
   background-image: url("../assets/space.jpg");
   background-blend-mode: color-dodge;
