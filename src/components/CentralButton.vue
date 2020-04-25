@@ -25,13 +25,14 @@ button {
   font-family: "Monoton", cursive;
 
   &:hover {
-    background: $pumpkin-gradient;
+    // background: $pumpkin-gradient;
     @include button-active;
-    border: none;
-    box-shadow:
-    0 0 30px 15px $azureish-white,
-    0 0 50px 30px #00bfff,
-    0 0 60px 45px $saffron;
+    // border: none;
+    // box-shadow:
+    // 0 0 30px 15px $azureish-white,
+    // 0 0 50px 30px #00bfff,
+    // 0 0 60px 45px $saffron;
+    transition-duration: 0.3s;
   }
 
   a{
