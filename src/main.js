@@ -9,9 +9,9 @@ Vue.use(VueRouter)
 Vue.config.productionTip = false
 
 const routes =  [  
-  {path: "/", component: Home},
-  {path: "/wtf", component: Flickeringfont},
-  {path: "/98", component: Windows98},
+  {path: "/", component: Home, meta: {title:'Nina Voelker'}},
+  {path: "/wtf", component: Flickeringfont, meta: {title:'Storytime'}},
+  {path: "/98", component: Windows98, meta: {title:'This is aTime Travel'}},
 ]
 
 const router = new VueRouter({
