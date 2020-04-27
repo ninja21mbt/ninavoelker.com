@@ -21,6 +21,7 @@ body {
   margin: 0;
   height: 100vh;
   overflow: hidden;
+  
 }
   #app {
     text-align: center;
@@ -30,6 +31,7 @@ body {
 
     background-color: $eerie-black;
     background-image: url('./assets/space.jpg');
+    cursor: url('./assets/cursor.png') default;
     background-blend-mode: color-dodge;
     color: $azureish-white;
     height: 100%;

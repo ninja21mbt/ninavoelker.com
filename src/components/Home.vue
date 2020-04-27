@@ -77,6 +77,7 @@ export default {
   background-blend-mode: color-dodge;
   color: $azureish-white;
   height: 100%;
+  
 }
 
 #button {
@@ -103,7 +104,7 @@ export default {
     animation-name: animatespaceship;
     animation-duration: 0.2s;
     animation-iteration-count: infinite;
-    cursor: pointer;
+    
   }
 }
 

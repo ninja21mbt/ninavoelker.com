@@ -34,7 +34,7 @@
       <label for="radio6">go to space</label>
     </div>
     <div class="field-row" id="buttons">
-    <button v-on:click="scared" class="okButton">Ok</button>
+    <button v-on:click="scared" class="okButton" >Ok</button>
     <button v-on:click="closeWindow">Cancel</button>
       </div>
       </div>
@@ -74,9 +74,11 @@ export default {
       maximize: function(event) {
           if(event) {
               let el = this.$refs['window'];
-              el.style.setProperty("height", "100%");
-              el.style.setProperty("width", "100%");
-              el.style.setProperty("left", "0%") 
+              el.style.setProperty("height", "98%");
+              el.style.setProperty("width", "98%");
+              el.style.setProperty("left", "0px");
+              el.style.setProperty("postition", "relative");
+              el.style.setProperty("z-index","150");
           }
       } ,
 
