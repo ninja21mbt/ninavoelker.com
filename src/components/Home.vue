@@ -104,7 +104,7 @@ export default {
     animation-name: animatespaceship;
     animation-duration: 0.2s;
     animation-iteration-count: infinite;
-    
+    cursor: pointer;
   }
 }
 

@@ -31,7 +31,8 @@ body {
 
     background-color: $eerie-black;
     background-image: url('./assets/space.jpg');
-    cursor: url('./assets/cursor.png') default;
+    cursor: none;
+    cursor: url('./assets/maincursor.png'), pointer;
     background-blend-mode: color-dodge;
     color: $azureish-white;
     height: 100%;
