@@ -67,7 +67,8 @@ export default {
       closeTimeTravel: function(event) {
           if (event) {
               let el = this.$refs['body'];
-              el.style.setProperty("visibility", "hidden");      
+              el.style.setProperty("visibility", "hidden");
+              el.style.setProperty('z-index', '0');    
           }
       },
 

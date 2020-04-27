@@ -92,13 +92,16 @@ export default {
   visibility: hidden;
 
 }
-
+// --------------------- spaceship spaceship spaceship ----------------------------
 #spaceship {
   z-index: 50;
   height: 400px;
   position: relative;
   right: -390px;
   bottom: -190px;
+  animation-name: animatespaceship;
+    animation-duration: 0.2s;
+    animation-iteration-count: 2;
 
   &:hover {
     animation-name: animatespaceship;
@@ -196,6 +199,9 @@ export default {
   }
 }
 
+
+// --------------------- moon moon moon ----------------------------
+
 #moon{
     z-index: 20;
     position: absolute;
@@ -203,11 +209,37 @@ export default {
     left: -80px;
     height: 450px;
     transition-property: all;
+    animation-name: wobble;
+    animation-duration: 1s;
+    animation-iteration-count: 2;
 
     &:hover{
         filter: invert(100);
         transition-duration: 0.5s;
         cursor: pointer;
+        animation-name: wobble;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
     }
+}
+
+@keyframes wobble {
+  0%{
+    height: 450px;
+  }
+
+  25%{
+    height: 460px;
+  }
+
+  50%{
+    height: 440px;
+  }
+
+  100%{
+    height: 450px;
+  }
+
+
 }
 </style>
