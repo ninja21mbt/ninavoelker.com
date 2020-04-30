@@ -4,13 +4,13 @@
       <CentralButton />
     </div>
     <div id="Windows98" ref="Windows98">
-    <Windows98 />
+      <Windows98 />
     </div>
     <img id="spaceship" src="../assets/spaceship.png" v-on:mousedown="fly" v-on:mouseup="stop" />
     <div id="laser" ref="laser"></div>
     <div id="laser2" ref="laser2"></div>
-    
-    <img id="moon" src="../assets/moon.png" v-on:click="openTimeTravel"/>
+
+    <img id="moon" src="../assets/moon.png" v-on:click="openTimeTravel" />
   </div>
 </template>
 
@@ -18,48 +18,46 @@
 import CentralButton from "../components/CentralButton.vue";
 import Windows98 from "../components/Windows98.vue";
 
-
 export default {
   name: "Home",
-   components: {
-      CentralButton,
-      Windows98
-    },
+  components: {
+    CentralButton,
+    Windows98
+  },
   methods: {
     fly: function(event) {
       if (event) {
-        let el = this.$refs['laser'];
-        let el2 = this.$refs['laser2'];
+        let el = this.$refs["laser"];
+        let el2 = this.$refs["laser2"];
         el.style.setProperty("visibility", "visible");
         el2.style.setProperty("visibility", "visible");
-      }},
+      }
+    },
 
     stop: function(event) {
       if (event) {
-        let el3 = this.$refs['laser'];
-        let el4 = this.$refs['laser2'];
+        let el3 = this.$refs["laser"];
+        let el4 = this.$refs["laser2"];
         el3.style.setProperty("visibility", "hidden");
         el4.style.setProperty("visibility", "hidden");
       }
     },
 
     openTimeTravel: function(event) {
-          if (event) {
-              let el = this.$refs['Windows98'];
-              el.style.setProperty("visibility", "visible");      
-          }
-      },
-
-      closeTimeTravel: function(event) {
-          if (event) {
-              let el = this.$refs['Windows98'];
-              el.style.setProperty("visibility", "hidden");      
-          }
+      if (event) {
+        let el = this.$refs["Windows98"];
+        el.style.setProperty("visibility", "visible");
       }
-  },
-   
+    },
+
+    closeTimeTravel: function(event) {
+      if (event) {
+        let el = this.$refs["Windows98"];
+        el.style.setProperty("visibility", "hidden");
+      }
+    }
   }
-;
+};
 </script>
 
 <style lang="scss" scoped>
@@ -77,20 +75,18 @@ export default {
   background-blend-mode: color-dodge;
   color: $azureish-white;
   height: 100%;
-  
 }
 
 #button {
   position: absolute;
 }
 
-#Windows98{
+#Windows98 {
   position: absolute;
   z-index: 100;
   width: 80%;
   height: 80%;
   visibility: hidden;
-
 }
 // --------------------- spaceship spaceship spaceship ----------------------------
 #spaceship {
@@ -100,8 +96,8 @@ export default {
   right: -390px;
   bottom: -190px;
   animation-name: animatespaceship;
-    animation-duration: 0.2s;
-    animation-iteration-count: 2;
+  animation-duration: 0.2s;
+  animation-iteration-count: 2;
 
   &:hover {
     animation-name: animatespaceship;
@@ -199,47 +195,61 @@ export default {
   }
 }
 
-
 // --------------------- moon moon moon ----------------------------
 
-#moon{
-    z-index: 20;
-    position: absolute;
-    top: 70px;
-    left: -80px;
-    height: 450px;
-    transition-property: all;
+#moon {
+  z-index: 20;
+  position: absolute;
+  top: 70px;
+  left: -50px;
+  height: 400px;
+  transition-property: all;
+  animation-name: wobble;
+  animation-duration: 1s;
+  animation-iteration-count: 2;
+  transition-duration: 1s;
+
+  &:hover {
+    // filter: invert(100);
+    filter: brightness(150%);
+    cursor: pointer;
     animation-name: wobble;
     animation-duration: 1s;
-    animation-iteration-count: 2;
+    animation-iteration-count: infinite;
+  }
 
-    &:hover{
-        filter: invert(100);
-        transition-duration: 0.5s;
-        cursor: pointer;
-        animation-name: wobble;
-        animation-duration: 1s;
-        animation-iteration-count: infinite;
-    }
+  &:active {
+    animation-name: active;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+  }
 }
 
 @keyframes wobble {
-  0%{
-    height: 450px;
+  0% {
+    height: 400px;
   }
 
-  25%{
-    height: 460px;
+  25% {
+    height: 410px;
   }
 
-  50%{
+  50% {
     height: 440px;
   }
 
-  100%{
-    height: 450px;
+  100% {
+    height: 400px;
+  }
+}
+
+@keyframes active {
+  0% {
+    height: 400px;
   }
 
-
+  100% {
+    height: 550px;
+  }
 }
 </style>

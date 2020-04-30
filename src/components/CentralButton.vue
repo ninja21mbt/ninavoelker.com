@@ -1,6 +1,8 @@
 <template>
   <div>
-    <button><router-link to="/wtf">spacy</router-link></button>
+    <router-link to="/wtf">
+      <button>fiction</button>
+    </router-link>
   </div>
 </template>
 
@@ -17,32 +19,27 @@ export default {
 
 @import url("https://fonts.googleapis.com/css?family=Monoton&display=swap");
 
-button {
-  @include button;
-  @include button-shadow; 
-  margin: 40px; 
-  border: 3px dotted $azureish-white;
-  font-family: "Monoton", cursive;
-
+a {
   &:hover {
-    // background: $pumpkin-gradient;
-    @include button-active;
-    // border: none;
-    // box-shadow:
-    // 0 0 30px 15px $azureish-white,
-    // 0 0 50px 30px #00bfff,
-    // 0 0 60px 45px $saffron;
-    transition-duration: 0.3s;
+    text-shadow: 2px 2px 5px $eerie-black;
   }
 
-  a{
+  button {
+    @include button;
+    @include button-shadow;
+    margin: 40px;
+    border: 3px dotted $azureish-white;
+    font-family: "Monoton", cursive;
     color: $azureish-white;
-    font-size: 5em;
+    font-size: 4em;
     text-shadow: 2px 2px 5px $azureish-white;
     text-decoration: none;
 
-    &:hover{
-      text-shadow: 2px 2px 5px $eerie-black;
+    &:hover {
+      background-image: linear-gradient(50deg, blue, pink);
+      background-origin: border-box;
+      transition-duration: 0.5s;
+      cursor: pointer;
     }
   }
 }
