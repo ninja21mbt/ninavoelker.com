@@ -42,6 +42,9 @@
     </div>
     </div>
   </div>
+    <router-link to="/" id="backbutton">
+    <img src="../assets/delorean.png" alt="back to the future" id="delorean">
+    </router-link>
   </div>
 </template>
 
@@ -133,6 +136,16 @@ export default {
 #buttons{
     display: flex;
     justify-content: flex-end;
+}
+
+#backbutton{
+  position: absolute;
+  bottom: 150px;
+  right: 200px;
+
+  img {
+    height: 100px;
+  }
 }
 
 }
