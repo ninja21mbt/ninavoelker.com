@@ -1,5 +1,6 @@
 <template>
-  <div id="body" ref="body" class="window">
+  <div id="body" ref="body">
+  <div class="window" ref="window" id="hellowindow">
     <div class="title-bar">
       <div class="title-bar-text">This is a Time Travel</div>
       <div class="title-bar-controls">
@@ -40,6 +41,7 @@
       </div>
     </div>
     </div>
+  </div>
   </div>
 </template>
 
@@ -98,12 +100,22 @@ export default {
 @import url("https://unpkg.com/98.css");
 
 #body {
-  background-color: grey;
+  background-image: url('../assets/98background.png');
+  background-size: 100% 100%;
+  //background-attachment: fixed;
   color: black;
   height: 100%;
   width: 100%;
-  h1 {
+  display: flex;
+  justify-content: center;
+
+  #hellowindow{
+    width: 50%;
+    height: 30%;
+    margin-top: 15%;
+    h1 {
     font-size: 20px;
+  }
   }
 
   #window{
