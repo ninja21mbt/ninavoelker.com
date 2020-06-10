@@ -1,6 +1,6 @@
 <template>
   <div id="body" ref="body">
-  <div class="window" ref="window" id="hellowindow">
+  <div class="window" id="hellowindow">
     <div class="title-bar">
       <div class="title-bar-text">This is a Time Travel</div>
       <div class="title-bar-controls">
@@ -49,6 +49,11 @@
     <router-link to="/" id="backbutton">
     <img src="../assets/delorean.png" alt="back to the future" id="delorean">
     </router-link>
+
+    <div id="mobile">
+      <h1>Sorry! Your device is not able to travel in time.</h1>
+      <router-link to="/" id="mobilebutton">back to space</router-link>
+    </div>
   </div>
 </template>
 
@@ -131,6 +136,7 @@ export default {
       position: relative;
       left: 50%;
       margin: 5px;
+      z-index: 100;
   }
 
   .okButton{
@@ -149,6 +155,30 @@ export default {
 
   img {
     height: 100px;
+  }
+}
+
+#mobile{
+  visibility: hidden;
+}
+
+@media screen and (max-width:"680px") {
+  #mobile{
+    background-color: black;
+    z-index: 150;
+    visibility: visible;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+      h1{
+        color: rgb(248, 148, 17);
+      }
+  }
+
+  .window{
+    visibility: hidden;
   }
 }
 

@@ -3,9 +3,7 @@
     <div id="button">
       <CentralButton />
     </div>
-    <!-- <div id="Windows98" ref="Windows98">
-      <Windows98 />
-    </div> -->
+  
     <img id="spaceship" src="../assets/spaceship.png" v-on:mousedown="fly" v-on:mouseup="stop" />
     <div id="laser" ref="laser"></div>
     <div id="laser2" ref="laser2"></div>
@@ -18,13 +16,11 @@
 
 <script>
 import CentralButton from "../components/CentralButton.vue";
-// import Windows98 from "../components/Windows98.vue";
 
 export default {
   name: "Home",
   components: {
     CentralButton,
-    // Windows98
   },
   methods: {
     fly: function(event) {
@@ -45,20 +41,7 @@ export default {
       }
     }
   }}
-  //   openTimeTravel: function(event) {
-  //     if (event) {
-  //       let el = this.$refs["Windows98"];
-  //       el.style.setProperty("visibility", "visible");
-  //     }
-  //   },
 
-  //   closeTimeTravel: function(event) {
-  //     if (event) {
-  //       let el = this.$refs["Windows98"];
-  //       el.style.setProperty("visibility", "hidden");
-  //     }
-  //   }
-  // }
 </script>
 
 <style lang="scss" scoped>
@@ -82,13 +65,7 @@ export default {
   position: absolute;
 }
 
-#Windows98 {
-  position: absolute;
-  z-index: 100;
-  width: 80%;
-  height: 80%;
-  visibility: hidden;
-}
+
 // --------------------- spaceship spaceship spaceship ----------------------------
 #spaceship {
   z-index: 50;
