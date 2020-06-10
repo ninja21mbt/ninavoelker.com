@@ -51,7 +51,7 @@
     </router-link>
 
     <div id="mobile">
-      <h1>Sorry! Your device is not able to travel in time.</h1>
+      <h1>Sorry! <br> Your device is not able to travel in time.</h1>
       <router-link to="/" id="mobilebutton">back to space</router-link>
     </div>
   </div>
@@ -164,7 +164,7 @@ export default {
 
 @media screen and (max-width:"680px") {
   #mobile{
-    background-color: black;
+    background-color:$eerie-black;
     z-index: 150;
     visibility: visible;
     position: absolute;
@@ -173,7 +173,17 @@ export default {
     right: 0px;
     bottom: 0px;
       h1{
-        color: rgb(248, 148, 17);
+        color: $pumpkin;
+        font-size: 35px;
+      }
+
+      a{
+        text-decoration: none;
+        color: $azureish-white;
+        padding: 15px;
+        font-size: 20px;
+        border: 2px dotted $smashed-pumpkin;
+        border-radius: 5px;
       }
   }
 
