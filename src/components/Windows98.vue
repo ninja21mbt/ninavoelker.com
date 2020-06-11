@@ -160,6 +160,7 @@ export default {
 
 #mobile{
   visibility: hidden;
+  position: absolute;
 }
 
 @media screen and (max-width:"680px") {
@@ -167,7 +168,6 @@ export default {
     background-color:$eerie-black;
     z-index: 150;
     visibility: visible;
-    position: absolute;
     left: 0px;
     top: 0px;
     right: 0px;
