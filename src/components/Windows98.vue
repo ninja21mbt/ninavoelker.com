@@ -12,8 +12,7 @@
     <div class="window-body">
     <h1>Hello Stranger!</h1>
     <p>
-      Congratulations! You succesfully used the power of the moon to travel back in time. <br>
-      But do you have what it takes to go back to the future?
+      Congratulations! You succesfully used the power of the moon to travel back in time. 
     </p>
     <button v-on:click="openWindow" class="okButton">Start</button>
 
