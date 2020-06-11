@@ -11,6 +11,8 @@
     <router-link to="/98">
     <img id="moon" src="../assets/moon.png" />
     </router-link>
+
+    <img id="meteor" src="../assets/meteor.png" />
   </div>
 </template>
 
@@ -187,7 +189,7 @@ export default {
   z-index: 20;
   position: absolute;
   top: 70px;
-  left: -50px;
+  left: 5px;
   height: 400px;
   transition-property: all;
   animation-name: wobble;
@@ -285,5 +287,15 @@ export default {
   100% {
     height: 350px;
   }
+}
+
+/*-------------------meteor----------------------*/
+
+#meteor{
+  position: absolute;
+  top: -60px;
+  width: 400px;
+  height: 200px;
+  right: 200px;
 }
 </style>
