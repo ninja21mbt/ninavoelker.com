@@ -88,10 +88,11 @@ export default {
       maximize: function(event) {
           if(event) {
               let el = this.$refs['window'];
-              el.style.setProperty("height", "98%");
-              el.style.setProperty("width", "98%");
-              el.style.setProperty("left", "0px");
-              el.style.setProperty("postition", "relative");
+              el.style.setProperty("height", "100vh");
+              el.style.setProperty("width", "100vw");
+              el.style.setProperty("left", "0");
+              el.style.setProperty("top", "0");
+              el.style.setProperty("postition", "absolute");
               el.style.setProperty("z-index","150");
           }
       } ,
@@ -175,7 +176,6 @@ export default {
         color: $pumpkin;
         font-size: 35px;
       }
-
       a{
         text-decoration: none;
         color: $azureish-white;

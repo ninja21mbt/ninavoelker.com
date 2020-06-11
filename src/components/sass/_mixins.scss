@@ -13,6 +13,14 @@
     border: none;
 }
 
+@mixin mobilebutton{
+    background-color: $eerie-black;
+    width: 200px;
+    height: 200px;
+    border-radius: 5%;
+    border: none;
+}
+
 @mixin button-shadow{
     box-shadow: 0 -15px 40px -15px $arsenic,
                 -15px 0 40px -15px $arsenic,

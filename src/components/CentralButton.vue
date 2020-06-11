@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-link to="/wtf">
+    <router-link to="/wtf" >
       <button>fiction</button>
     </router-link>
   </div>
@@ -41,6 +41,13 @@ a {
       transition-duration: 0.5s;
       cursor: pointer;
     }
+  }
+@media screen and (max-width:"680px") {
+  button{
+    @include mobilebutton;
+    font-size: 2em;
+    border: 2px dotted $azureish-white;
+  }
   }
 }
 </style>

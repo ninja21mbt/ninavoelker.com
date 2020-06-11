@@ -65,7 +65,6 @@ export default {
   position: absolute;
 }
 
-
 // --------------------- spaceship spaceship spaceship ----------------------------
 #spaceship {
   z-index: 50;
@@ -82,6 +81,15 @@ export default {
     animation-duration: 0.2s;
     animation-iteration-count: infinite;
     cursor: pointer;
+  }
+}
+
+@media screen and (max-width:"680px") {
+  #spaceship{
+    height: 200px;
+    right: -130px;
+    bottom: -230px;
+    animation-name: mobilespaceship;
   }
 }
 
@@ -203,6 +211,26 @@ export default {
   }
 }
 
+@media screen and (max-width:"680px") {
+  #moon{
+    height: 200px;
+    left: 50px;
+    top: 50px;
+
+    &:hover{
+      animation-name: mobilewobble;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+
+    &:active{
+      animation-name: mobileactive;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    }
+  }
+}
+
 @keyframes wobble {
   0% {
     height: 400px;
@@ -221,6 +249,24 @@ export default {
   }
 }
 
+@keyframes mobilewobble {
+  0% {
+    height: 200px;
+  }
+
+  25% {
+    height: 210px;
+  }
+
+  50% {
+    height: 240px;
+  }
+
+  100% {
+    height: 200px;
+  }
+}
+
 @keyframes active {
   0% {
     height: 400px;
@@ -228,6 +274,16 @@ export default {
 
   100% {
     height: 550px;
+  }
+}
+
+@keyframes mobileactive {
+  0% {
+    height: 200px;
+  }
+
+  100% {
+    height: 350px;
   }
 }
 </style>
