@@ -82,7 +82,8 @@ export default {
     animation-name: animatespaceship;
     animation-duration: 0.2s;
     animation-iteration-count: infinite;
-    cursor: pointer;
+    cursor: none;
+    cursor: url('../assets/realactivecursor.png'), pointer;
   }
 }
 
@@ -200,16 +201,19 @@ export default {
   &:hover {
     // filter: invert(100);
     filter: brightness(150%);
-    cursor: pointer;
     animation-name: wobble;
     animation-duration: 1s;
     animation-iteration-count: infinite;
+    cursor: none;
+    cursor: url('../assets/realactivecursor.png'), pointer;
   }
 
   &:active {
     animation-name: active;
     animation-iteration-count: 1;
     animation-duration: 0.5s;
+    cursor: none;
+    cursor: url('../assets/realactivecursor.png'), pointer;
   }
 }
 
@@ -297,5 +301,10 @@ export default {
   width: 400px;
   height: 200px;
   right: 200px;
+  
+  &:hover{
+    cursor: none;
+    cursor: url('../assets/realactivecursor.png'), pointer;
+  }
 }
 </style>

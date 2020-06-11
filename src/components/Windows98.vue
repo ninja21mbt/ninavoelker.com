@@ -120,6 +120,8 @@ export default {
   width: 100%;
   display: flex;
   justify-content: center;
+  cursor: none;
+  cursor: url('../assets/98cursor.png'), pointer;
 
   #hellowindow{
     width: 50%;

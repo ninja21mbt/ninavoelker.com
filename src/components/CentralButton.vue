@@ -22,6 +22,8 @@ export default {
 a {
   &:hover {
     text-shadow: 2px 2px 5px $eerie-black;
+    cursor: none;
+    cursor: url('../assets/realactivecursor.png'), pointer;
   }
 
   button {
@@ -39,7 +41,9 @@ a {
       background-image: linear-gradient(50deg, blue, pink);
       background-origin: border-box;
       transition-duration: 0.5s;
-      cursor: pointer;
+      
+      cursor: none;
+    cursor: url('../assets/realactivecursor.png'), pointer;
     }
   }
 @media screen and (max-width:"680px") {

@@ -44,6 +44,11 @@ export default {
     animation-name: textflicker;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+
+    &:hover{  
+    cursor: none;
+    cursor: url('../assets/realactivecursor.png'), pointer;
+    }
   }
 
   @keyframes textflicker {
