@@ -3,13 +3,13 @@
     <div id="button">
       <CentralButton />
     </div>
-  
+
     <img id="spaceship" src="../assets/spaceship.png" v-on:mousedown="fly" v-on:mouseup="stop" />
     <div id="laser" ref="laser"></div>
     <div id="laser2" ref="laser2"></div>
-    
+
     <router-link to="/98">
-    <img id="moon" src="../assets/moon.png" />
+      <img id="moon" src="../assets/moon.png" />
     </router-link>
 
     <img id="meteor" src="../assets/meteor.png" />
@@ -22,7 +22,7 @@ import CentralButton from "../components/CentralButton.vue";
 export default {
   name: "Home",
   components: {
-    CentralButton,
+    CentralButton
   },
   methods: {
     fly: function(event) {
@@ -42,8 +42,8 @@ export default {
         el4.style.setProperty("visibility", "hidden");
       }
     }
-  }}
-
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -83,12 +83,12 @@ export default {
     animation-duration: 0.2s;
     animation-iteration-count: infinite;
     cursor: none;
-    cursor: url('../assets/realactivecursor.png'), pointer;
+    cursor: url("../assets/realactivecursor.png"), pointer;
   }
 }
 
-@media screen and (max-width:"680px") {
-  #spaceship{
+@media screen and (max-width: "680px") {
+  #spaceship {
     height: 200px;
     right: -130px;
     bottom: -230px;
@@ -191,7 +191,7 @@ export default {
   position: absolute;
   top: 70px;
   left: 5px;
-  height: 400px;
+  height: 300px;
   transition-property: all;
   animation-name: wobble;
   animation-duration: 1s;
@@ -205,7 +205,7 @@ export default {
     animation-duration: 1s;
     animation-iteration-count: infinite;
     cursor: none;
-    cursor: url('../assets/realactivecursor.png'), pointer;
+    cursor: url("../assets/realactivecursor.png"), pointer;
   }
 
   &:active {
@@ -213,45 +213,43 @@ export default {
     animation-iteration-count: 1;
     animation-duration: 0.5s;
     cursor: none;
-    cursor: url('../assets/realactivecursor.png'), pointer;
+    cursor: url("../assets/realactivecursor.png"), pointer;
   }
 }
 
-@media screen and (max-width:"680px") {
-  #moon{
+@media screen and (max-width: "680px") {
+  #moon {
     height: 200px;
     left: 50px;
     top: 50px;
 
-    &:hover{
+    &:hover {
       animation-name: mobilewobble;
       animation-duration: 1s;
       animation-iteration-count: infinite;
     }
 
-    &:active{
-      animation-name: mobileactive;
-    animation-iteration-count: 1;
-    animation-duration: 0.5s;
+    &:active {
+      animation: none;
     }
   }
 }
 
 @keyframes wobble {
   0% {
-    height: 400px;
+    height: 300px;
   }
 
   25% {
-    height: 410px;
+    height: 310px;
   }
 
   50% {
-    height: 440px;
+    height: 330px;
   }
 
   100% {
-    height: 400px;
+    height: 300px;
   }
 }
 
@@ -265,7 +263,7 @@ export default {
   }
 
   50% {
-    height: 240px;
+    height: 220px;
   }
 
   100% {
@@ -275,36 +273,27 @@ export default {
 
 @keyframes active {
   0% {
-    height: 400px;
+    height: 300px;
   }
 
   100% {
-    height: 550px;
+    height: 380px;
   }
 }
 
-@keyframes mobileactive {
-  0% {
-    height: 200px;
-  }
-
-  100% {
-    height: 350px;
-  }
-}
 
 /*-------------------meteor----------------------*/
 
-#meteor{
+#meteor {
   position: absolute;
   top: -60px;
   width: 400px;
   height: 200px;
   right: 200px;
-  
-  &:hover{
+
+  &:hover {
     cursor: none;
-    cursor: url('../assets/realactivecursor.png'), pointer;
+    cursor: url("../assets/realactivecursor.png"), pointer;
   }
 }
 </style>

@@ -160,6 +160,7 @@ export default {
     }
   }
 
+
   #mobile {
     visibility: hidden;
     position: absolute;
