@@ -11,8 +11,9 @@
     <router-link to="/98">
       <img id="moon" src="../assets/moon.png" />
     </router-link>
-
+    <router-link to="/wtf" >
     <img id="meteor" src="../assets/meteor.png" />
+    </router-link>
   </div>
 </template>
 
