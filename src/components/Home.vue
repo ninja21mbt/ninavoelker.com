@@ -3,11 +3,9 @@
     <div id="button">
       <CentralButton />
     </div>
-
-    <img id="spaceship" src="../assets/spaceship.png" v-on:mousedown="fly" v-on:mouseup="stop" />
-    <div id="laser" ref="laser"></div>
-    <div id="laser2" ref="laser2"></div>
-
+    <div id="spaceship">
+    <Spaceship />
+    </div>
     <router-link to="/98">
       <img id="moon" src="../assets/moon.png" />
     </router-link>
@@ -19,31 +17,14 @@
 
 <script>
 import CentralButton from "../components/CentralButton.vue";
+import Spaceship from "../components/Spaceship.vue";
 
 export default {
   name: "Home",
   components: {
-    CentralButton
+    CentralButton,
+    Spaceship
   },
-  methods: {
-    fly: function(event) {
-      if (event) {
-        let el = this.$refs["laser"];
-        let el2 = this.$refs["laser2"];
-        el.style.setProperty("visibility", "visible");
-        el2.style.setProperty("visibility", "visible");
-      }
-    },
-
-    stop: function(event) {
-      if (event) {
-        let el3 = this.$refs["laser"];
-        let el4 = this.$refs["laser2"];
-        el3.style.setProperty("visibility", "hidden");
-        el4.style.setProperty("visibility", "hidden");
-      }
-    }
-  }
 };
 </script>
 
@@ -62,6 +43,7 @@ export default {
   background-blend-mode: color-dodge;
   color: $azureish-white;
   height: 100%;
+  width: 100vw;
 }
 
 #button {
@@ -69,120 +51,14 @@ export default {
 }
 
 // --------------------- spaceship spaceship spaceship ----------------------------
-#spaceship {
-  z-index: 50;
-  height: 400px;
-  position: relative;
-  right: -390px;
-  bottom: -190px;
-  animation-name: animatespaceship;
-  animation-duration: 0.2s;
-  animation-iteration-count: 2;
 
-  &:hover {
-    animation-name: animatespaceship;
-    animation-duration: 0.2s;
-    animation-iteration-count: infinite;
-    cursor: none;
-    cursor: url("../assets/realactivecursor.png"), pointer;
-  }
-}
-
-@media screen and (max-width: "680px") {
-  #spaceship {
-    height: 200px;
-    right: -130px;
-    bottom: -230px;
-    animation-name: mobilespaceship;
-  }
-}
-
-@keyframes animatespaceship {
-  0% {
-    right: -390px;
-    bottom: -190px;
-  }
-
-  25% {
-    right: -383px;
-    bottom: -183px;
-  }
-
-  75% {
-    right: -390px;
-    bottom: -183px;
-  }
-
-  100% {
-    right: -383px;
-    bottom: -183px;
-  }
-}
-
-#laser {
+#spaceship{
   z-index: 100;
-  height: 5px;
-  width: 5px;
-  border-radius: 50%;
-  position: relative;
-  bottom: -300px;
-  background-color: red;
-  box-shadow: 0 0 16px 13px darkred, 0 0 25px 16px white, 0 0 15px 19px red;
-  visibility: hidden;
-  animation-name: laser;
-  animation-duration: 0.01s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes laser {
-  0% {
-    bottom: -300px;
-  }
-
-  50% {
-    left: -40px;
-    bottom: -420px;
-  }
-
-  100% {
-    left: -400px;
-    bottom: -800px;
-  }
-}
-
-#laser2 {
-  z-index: 100;
-  height: 5px;
-  width: 5px;
-  border-radius: 50%;
-  position: relative;
-  bottom: -280px;
-  left: -100px;
-  visibility: hidden;
-
-  background-color: red;
-  box-shadow: 0 0 16px 13px darkred, 0 0 25px 16px white, 0 0 15px 19px red;
-
-  animation-name: laser2;
-  animation-duration: 0.001s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes laser2 {
-  0% {
-    left: -100px;
-    bottom: -280px;
-  }
-
-  50% {
-    left: -600px;
-    bottom: -350px;
-  }
-
-  100% {
-    left: -1500px;
-    bottom: -550px;
-  }
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  height: 70vh;
+  width: 50vw;
 }
 
 // --------------------- moon moon moon ----------------------------
