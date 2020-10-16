@@ -96,6 +96,7 @@ export default {
 
 @media screen and (max-width: "680px") {
   #moon {
+    display: none;
     height: 200px;
     left: 50px;
     top: 50px;
@@ -171,6 +172,12 @@ export default {
   &:hover {
     cursor: none;
     cursor: url("../assets/realactivecursor.png"), pointer;
+  }
+}
+
+@media screen and (max-width: "680px") {
+  #meteor{
+    display: none;
   }
 }
 </style>

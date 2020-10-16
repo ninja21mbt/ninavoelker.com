@@ -1,5 +1,13 @@
 <template>
   <div id="body" ref="body">
+    <div class="closefield" v-on:click="closeStart">
+    </div>
+    <div class="startbutton" v-on:click="openStart">
+    </div>
+    <div id="start" ref="start">
+      <Start98 />
+      </div>
+    
     <div class="window" id="hellowindow" ref="hellowindow">
       <div class="title-bar">
         <div class="title-bar-text">This is a Time Travel</div>
@@ -57,9 +65,28 @@
 </template>
 
 <script>
+import Start98 from "../components/Start98.vue";
+
 export default {
   name: "Windows98",
+  components: {
+    Start98
+  },
   methods: {
+     openStart: function(event) {
+      if (event) {
+        let el = this.$refs["start"];
+        el.style.setProperty("display", "block");
+      }
+    },
+
+    closeStart: function(event) {
+      if (event) {
+        let el = this.$refs["start"];
+        el.style.setProperty("display", "none");
+      }
+    },
+
     openWindow: function(event) {
       if (event) {
         let el = this.$refs["window"];
@@ -123,10 +150,33 @@ export default {
   cursor: none;
   cursor: url("../assets/98cursor.png"), pointer;
 
+  .closefield {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    bottom: 40px;
+  }
+
+  .startbutton {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 30px;
+    width: 60px;
+  }
+
+  #start{
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    display: none;
+  }
+
   #hellowindow {
     width: 50%;
     height: 30%;
     margin-top: 15%;
+    z-index: 10;
     h1 {
       font-size: 20px;
     }

@@ -2,10 +2,10 @@
   <div>
     <div class="button">
       <button class="button__main">
-        <p class="text">{{message[0]}}</p>
+        <p class="text">{{ message[0] }}</p>
         <div class="backandforth">
-        <button class="back">&lt;</button>
-        <button class="next">&gt;</button>
+        <button class="back" v-on:click="message[0]">&lt;</button>
+        <button class="next" v-on:click="nexttext">&gt;</button>
         </div>
       </button>
       
@@ -19,13 +19,22 @@ export default {
   data: function() {
     return {
       message: [
-        "Welcome! You have succesfully found your way into space. This galaxy is a fun and exciting place. Feel free to take a look around...",
+        "Welcome to space! This galaxy is a fun and exciting place. Feel free to take a look around...",
         "Beware! Space is a magical place. Things can change around here without notice. You may want to visit them again after some time to experience them as a whole...",
         "This galaxy was formed not so long ago. It is in a state of constant evolution"
-      ]
+      ],
     };
-  }
-};
+  },
+
+ // methods: {
+
+  //   nexttext: function(event) {
+  //     if(event) {
+  //       console.log();
+  //     }
+  //   }
+  // }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -94,6 +103,12 @@ export default {
         cursor: none;
         cursor: url("../assets/realactivecursor.png"), pointer;
       }
+      }
+
+      @media screen and (max-width: "680px") {
+        .next, .back{
+        border: none;
+        }
       }
     }
   

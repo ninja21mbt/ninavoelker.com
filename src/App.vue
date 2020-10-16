@@ -22,7 +22,7 @@ body {
   height: 100vh;
   overflow: hidden;
   
-}
+
   #app {
     text-align: center;
       display: flex;
@@ -37,13 +37,5 @@ body {
     color: $azureish-white;
     height: 100%;
   }
-  
-
-//img{
- // z-index: 100;
-//  height: 400px;
-  // position: absolute;
-  // right: -90px;
-  // bottom: -90px;
-//}
+}
 </style>
