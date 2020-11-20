@@ -6,8 +6,7 @@
     <div class="border">
       <div class="wrapper">
         <h1 class="title">Nina Voelker</h1>
-        <p>
-        </p>
+        <p></p>
       </div>
     </div>
     <div class="hating">
@@ -43,15 +42,22 @@ export default {
     width: 100%;
     padding: 16px 0px;
     background-color: rgba(221, 55, 55, 0.514);
+
+    h2 {
+      font-size: 16px;
+    }
   }
 
-  .hating{
+  .hating {
     position: absolute;
     bottom: 16px;
-    font-size: 16px;
     width: 100%;
     padding: 15px 0;
     background-color: rgba(221, 55, 55, 0.514);
+
+    h2 {
+      font-size: 16px;
+    }
   }
 
   .border {
@@ -79,8 +85,8 @@ export default {
 
     .wrapper {
       background-color: $eerie-black;
-      width: 98%;
-      height: 98%;
+      width: 90%;
+      height: 90%;
       border-radius: 15px;
       padding: 24px;
 
@@ -101,5 +107,4 @@ export default {
 //     background-position: 100% 50%;
 //   }
 // }
-
 </style>
