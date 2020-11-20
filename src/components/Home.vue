@@ -43,7 +43,7 @@ export default {
   background-blend-mode: color-dodge;
   color: $azureish-white;
   height: 100%;
-  width: 100vw;
+  width: 100%;
 }
 
 #button {
