@@ -29,8 +29,8 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Monoton&display=swap");
 
 #homeMobile {
-  width: 100vh;
-  height: 100vw;
+  width: 100vw;
+  height: 100%;
   background-color: $smokey-black;
   display: flex;
   justify-content: center;
@@ -39,6 +39,7 @@ export default {
   .underconstruction {
     position: absolute;
     top: 16px;
+    font-size: 16px;
     width: 100%;
     padding: 16px 0px;
     background-color: rgba(221, 55, 55, 0.514);
@@ -46,7 +47,8 @@ export default {
 
   .hating{
     position: absolute;
-    bottom: 28;
+    bottom: 16px;
+    font-size: 16px;
     width: 100%;
     padding: 15px 0;
     background-color: rgba(221, 55, 55, 0.514);
