@@ -29,8 +29,8 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Monoton&display=swap");
 
 #homeMobile {
-  width: 100%;
-  height: 100%;
+  width: 100vh;
+  height: 100vw;
   background-color: $smokey-black;
   display: flex;
   justify-content: center;
