@@ -38,30 +38,30 @@ export default {
 
   .underconstruction {
     position: absolute;
-    top: 2rem;
+    top: 16px;
     width: 100%;
-    padding: 2rem 0rem;
+    padding: 16px 0px;
     background-color: rgba(221, 55, 55, 0.514);
   }
 
   .hating{
     position: absolute;
-    bottom: 2rem;
+    bottom: 28;
     width: 100%;
-    padding: 2rem 0rem;
+    padding: 15px 0;
     background-color: rgba(221, 55, 55, 0.514);
   }
 
   .border {
-    min-width: 50rem;
-    min-height: 40rem;
+    width: 70%;
+    height: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 15px;
     background-color: orange;
-    background-size: 200% 200%;
-    background-position: 0 100%;
+    // background-size: 200% 200%;
+    // background-position: 0 100%;
     background: linear-gradient(
       60deg,
       aquamarine,
@@ -73,31 +73,31 @@ export default {
       lawngreen,
       turquoise
     );
-    animation: moveGradient 4s alternate infinite;
+    // animation: moveGradient 4s alternate infinite;
 
     .wrapper {
       background-color: $eerie-black;
-      width: 45rem;
-      height: 35rem;
+      width: 98%;
+      height: 98%;
       border-radius: 15px;
-      padding: 2rem;
+      padding: 24px;
 
       h1 {
         font-family: monoton;
-        font-size: 5rem;
+        font-size: 32px;
       }
 
       p {
-        font-size: 3rem;
+        font-size: 16px;
       }
     }
   }
 }
 
-@keyframes moveGradient {
-  50% {
-    background-position: 100% 50%;
-  }
-}
+// @keyframes moveGradient {
+//   50% {
+//     background-position: 100% 50%;
+//   }
+// }
 
 </style>
