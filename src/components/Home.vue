@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="home">
     <div id="button">
       <CentralButton />
     </div>
@@ -33,7 +33,7 @@ export default {
 @import "./sass/_mixins";
 @import url("https://fonts.googleapis.com/css?family=Monoton&display=swap");
 
-#app {
+#home {
   text-align: center;
   display: flex;
   align-items: center;

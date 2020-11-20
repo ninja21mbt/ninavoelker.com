@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-<router-view></router-view>
+    <div id="desktop">
+    <router-view name="desktop"></router-view>
+    </div>
+    <div id="mobile">
+      <router-view name="mobile"></router-view>
+    </div>
   </div>
 </template>
 
@@ -25,7 +30,7 @@ body {
 
   #app {
     text-align: center;
-      display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 
@@ -36,6 +41,26 @@ body {
     background-blend-mode: color-dodge;
     color: $azureish-white;
     height: 100%;
+
+     #desktop{
+      width: 100%;
+      height: 100%;
+      display: none;
+      
+      @media screen and (min-width: "768px") {
+        display: block;
+      }
+    }
+
+    #mobile{
+      width: 100%;
+      height: 100%;
+      display: block;
+      
+      @media screen and (min-width: "768px") {
+        display: none;
+      }
+    }
   }
 }
 </style>

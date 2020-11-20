@@ -1,0 +1,103 @@
+<template>
+  <div id="homeMobile">
+    <div class="underconstruction">
+      <h2>...this website is under construction</h2>
+    </div>
+    <div class="border">
+      <div class="wrapper">
+        <h1 class="title">Nina Voelker</h1>
+        <p>
+        </p>
+      </div>
+    </div>
+    <div class="hating">
+      <h2>they see me coding they hatin' ...</h2>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "HomeMobile",
+  components: {}
+};
+</script>
+
+<style lang="scss" scoped>
+@import "./sass/_variables";
+@import "./sass/_mixins";
+@import url("https://fonts.googleapis.com/css?family=Monoton&display=swap");
+
+#homeMobile {
+  width: 100%;
+  height: 100%;
+  background-color: $smokey-black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .underconstruction {
+    position: absolute;
+    top: 2rem;
+    width: 100%;
+    padding: 2rem 0rem;
+    background-color: rgba(221, 55, 55, 0.514);
+  }
+
+  .hating{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    padding: 2rem 0rem;
+    background-color: rgba(221, 55, 55, 0.514);
+  }
+
+  .border {
+    min-width: 50rem;
+    min-height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: orange;
+    background-size: 200% 200%;
+    background-position: 0 100%;
+    background: linear-gradient(
+      60deg,
+      aquamarine,
+      lavender,
+      hotpink,
+      orange,
+      yellow,
+      lightgreen,
+      lawngreen,
+      turquoise
+    );
+    animation: moveGradient 4s alternate infinite;
+
+    .wrapper {
+      background-color: $eerie-black;
+      width: 45rem;
+      height: 35rem;
+      border-radius: 15px;
+      padding: 2rem;
+
+      h1 {
+        font-family: monoton;
+        font-size: 5rem;
+      }
+
+      p {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+</style>

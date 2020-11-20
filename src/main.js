@@ -3,15 +3,29 @@ import VueRouter from 'vue-router'
 import App from './App.vue'
 import Flickeringfont from './components/Flickeringfont.vue'
 import Home from './components/Home.vue'
+import HomeMobile from './components/HomeMobile.vue'
 import Windows98 from './components/Windows98.vue'
 
 Vue.use(VueRouter)
 Vue.config.productionTip = false
 
 const routes =  [  
-  {path: "/", component: Home, meta: {title:'Nina Voelker'}},
-  {path: "/wtf", component: Flickeringfont, meta: {title:'Storytime'}},
-  {path: "/98", component: Windows98, meta: {title:'This is aTime Travel'}},
+  {path: "/", 
+    components:{ 
+      desktop: Home, 
+      mobile: HomeMobile, 
+      meta: {title: 'Nina Voelker'}
+  }},
+  {path: "/wtf", 
+    components: {
+      desktop: Flickeringfont, 
+      meta: {title:'Storytime'}
+  }},
+  {path: "/98", 
+    components: {
+      desktop: Windows98, 
+      meta: {title:'This is aTime Travel'}
+  }},
 ]
 
 const router = new VueRouter({

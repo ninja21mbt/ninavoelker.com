@@ -1,13 +1,17 @@
 <template>
   <div id="body" ref="body">
-    <div class="closefield" v-on:click="closeStart">
-    </div>
-    <div class="startbutton" v-on:click="openStart">
-    </div>
+    <div class="closefield" v-on:click="closeStart"></div>
+    <div class="startbutton" v-on:click="openStart"></div>
     <div id="start" ref="start">
       <Start98 />
+    </div>
+    <div id="pictures" ref="pictures">
+      <Pictures98 />
+    </div>
+    <div id="directory" v-on:click="openPictures">
+       <img src="../assets/icons/directory_open.png"  />Lieblingsbilder
       </div>
-    
+
     <div class="window" id="hellowindow" ref="hellowindow">
       <div class="title-bar">
         <div class="title-bar-text">This is a Time Travel</div>
@@ -66,14 +70,17 @@
 
 <script>
 import Start98 from "../components/Start98.vue";
+import Pictures98 from "../components/Pictures98.vue";
+import { closeLevel2 } from "../components/Start98.vue";
 
 export default {
   name: "Windows98",
   components: {
-    Start98
+    Start98,
+    Pictures98
   },
   methods: {
-     openStart: function(event) {
+    openStart: function(event) {
       if (event) {
         let el = this.$refs["start"];
         el.style.setProperty("display", "block");
@@ -81,6 +88,21 @@ export default {
     },
 
     closeStart: function(event) {
+      if (event) {
+        let el = this.$refs["start"];
+        el.style.setProperty("display", "none");
+        closeLevel2();
+      }
+    },
+
+    openPictures: function(event) {
+      if (event) {
+        let el = this.$refs["pictures"];
+        el.style.setProperty("display", "block");
+      }
+    },
+
+    closePictures: function(event) {
       if (event) {
         let el = this.$refs["start"];
         el.style.setProperty("display", "none");
@@ -165,16 +187,28 @@ export default {
     width: 60px;
   }
 
-  #start{
+  #start {
     position: absolute;
     bottom: 18px;
     left: 0;
     display: none;
+    z-index: 2;
+  }
+
+  #directory{
+    z-index: 500;
+  }
+
+  #pictures {
+    display: none;
+    position: absolute;
+    top: 10%;
+    z-index: 600;
   }
 
   #hellowindow {
-    width: 50%;
-    height: 30%;
+    width: 40%;
+    height: 25%;
     margin-top: 15%;
     z-index: 10;
     h1 {
@@ -209,7 +243,6 @@ export default {
       height: 100px;
     }
   }
-
 
   #mobile {
     visibility: hidden;
