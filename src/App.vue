@@ -24,8 +24,8 @@ export default {
 
 body {
   margin: 0;
-  height: 100vh;
   overflow: hidden;
+  height: 100vh;
   
 
   #app {
@@ -53,7 +53,7 @@ body {
     }
 
     #mobile{
-      width: 100vw;
+      width: 100%;
       height: 100%;
       display: block;
       

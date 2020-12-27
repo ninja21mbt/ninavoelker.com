@@ -3,7 +3,10 @@
     <div class="window" id="photo-viewer">
       <div class="title-bar">
         <div class="title-bar-text">
-          <img class="title-bar-icon" src="../assets/icons/images.png" />Unbenannt - imaging
+          <img
+            class="title-bar-icon"
+            src="../assets/icons/images.png"
+          />Unbenannt - imaging
         </div>
         <div class="title-bar-controls">
           <button aria-label="Close" v-on:click="closePhoto"></button>
@@ -89,7 +92,7 @@
       </div>
       <div class="window-body">
         <div class="image-field">
-          <img src="../assets/lieblingsbilder/quattro.jpg" />
+          <img :src="images[0]" />
         </div>
       </div>
     </div>
@@ -99,17 +102,26 @@
 <script>
 import { closePhoto } from "../components/Windows98.vue";
 
-
 export default {
   name: "PhotoViewer98",
+
+  data: function () {
+    return {
+      images: [
+        "../assets/lieblingsbilder/moabit.jpeg",
+        "../assets/lieblingsbilder/quattro.jpg",
+      ],
+    };
+  },
+
   methods: {
-    closePhoto: function(event) {
+    closePhoto: function (event) {
       if (event) {
-        closePhoto()
+        closePhoto();
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

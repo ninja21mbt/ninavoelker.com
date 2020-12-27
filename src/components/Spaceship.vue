@@ -1,6 +1,6 @@
 <template>
   <div class="spaceship">
-    <img id="spaceship" src="../assets/spaceship.png" v-on:mousedown="fly" v-on:mouseup="stop" />
+    <img id="spaceship" src="../assets/spacecraft.png" v-on:mousedown="fly" v-on:mouseup="stop" />
     <div id="laser1" ref="laser1"></div>
     <div id="laser2" ref="laser2"></div>
   </div>

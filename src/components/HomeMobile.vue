@@ -34,6 +34,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("../assets/particles.jpg");
+  background-size: cover;
 
   .underconstruction {
     position: absolute;
@@ -61,15 +63,14 @@ export default {
   }
 
   .border {
-    width: 70%;
-    height: 40%;
+    width: 350px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 15px;
     background-color: orange;
-    // background-size: 200% 200%;
-    // background-position: 0 100%;
+    
     background: linear-gradient(
       60deg,
       aquamarine,
@@ -81,12 +82,11 @@ export default {
       lawngreen,
       turquoise
     );
-    // animation: moveGradient 4s alternate infinite;
 
     .wrapper {
       background-color: $eerie-black;
-      width: 90%;
-      height: 90%;
+      width: 295px;
+      height: 195px;
       border-radius: 15px;
       padding: 24px;
 
@@ -101,10 +101,4 @@ export default {
     }
   }
 }
-
-// @keyframes moveGradient {
-//   50% {
-//     background-position: 100% 50%;
-//   }
-// }
 </style>
